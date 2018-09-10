@@ -9,7 +9,7 @@ ENV USERNAME=sfdxuser
 ENV PASSWORD=sfdxuser
 
 ADD setupSSH.sh installSFDX.sh /usr/local/bin/
-#RUN setupSSH.sh ${USERNAME} ${PASSWORD}
+#RUN ["chmod", "+x","setupSSH.sh ${USERNAME} ${PASSWORD}"]
 RUN ["chmod", "+x","/usr/local/bin/installSFDX.sh"]
 
 # Expose port 22 for SSH and expose config folder
